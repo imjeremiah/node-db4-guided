@@ -16,7 +16,9 @@ exports.up = async function (knex) {
         .unsigned()
         .notNullable()
         .references('species_id')
-        .inTable('')
+        .inTable('species')
+        .onDelete('RESTRICT')
+        .onUpdate('RESTRICT')
     })
     .createTable('zoo_animals', table => {
       table.increments('zoo_animal_id')
