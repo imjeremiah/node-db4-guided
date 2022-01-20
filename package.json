@@ -5,7 +5,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "ketchup": "git fetch && git reset --hard origin/lecture",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback"
   },
   "dependencies": {
     "express": "^4.17.1",

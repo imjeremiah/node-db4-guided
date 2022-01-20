@@ -2,6 +2,7 @@ exports.up = async function (knex) {
   await knex.schema
     .createTable('zoos', table => {
       table.increments('zoo_id')
+      ta
     })
     .createTable('species', table => {
       table.increments('species_id')
