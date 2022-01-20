@@ -22,6 +22,20 @@ exports.up = async function (knex) {
     })
     .createTable('zoo_animals', table => {
       table.increments('zoo_animal_id')
+      table.integer('animal_id')
+        .unSigned()
+        .notNullable()
+        .references('animal_id')
+        .inTable('animals')
+        .onDelete('RESTRICT')
+        .onUpdate('RESTRICT')
+      table.integer('zoo_id')
+        .unSigned()
+        .notNullable()
+        .references('zoo_id')
+        .inTable('zoos')
+        .onDelete('RESTRICT')
+        .onUpdate('RESTRICT')
     })
 };
 
