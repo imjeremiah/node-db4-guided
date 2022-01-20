@@ -6,7 +6,8 @@
     "server": "nodemon index.js",
     "ketchup": "git fetch && git reset --hard origin/lecture",
     "migrate": "knex migrate:latest",
-    "rollback": "knex migrate:rollback"
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
   },
   "dependencies": {
     "express": "^4.17.1",
