@@ -14,6 +14,9 @@ exports.up = async function (knex) {
       table.string('animal_name', 100).notNullable()
       table.integer('species_id')
         .unsigned()
+        .notNullable()
+        .references('species_id')
+        .inTable('')
     })
     .createTable('zoo_animals', table => {
       table.increments('zoo_animal_id')
